@@ -27,3 +27,46 @@ body{background:radial-gradient(ellipse at 80% -10%,#26134a 0%,#090b14 48%);colo
 .brand,.mobile-brand{color:#f5f3ff}.brand-mark{background:linear-gradient(135deg,#d946ef,#7c3aed);box-shadow:0 0 22px #a855f766}.brand-dot{color:#e879f9}.nav-item{color:#a2abc4}.nav-item:hover,.nav-item.active{background:#241535;color:#e879f9}.admin-nav{background:#171326;color:#e879f9}.side-foot,.side-label,.section-overline{color:#8993b2}.user-mini{border-color:#272d43}.topbar{background:#0b0e19e8}.breadcrumb,.result-count,.page-title p,.shop-info p,.faq-item p,.permission-row p{color:#a3abc4}.search-field input,.form-field input,.form-field textarea,.form-field select,.rating-form textarea{background:#0b0e19;color:#f2f4ff;border-color:#30364f}.hero .banner-purple{background:linear-gradient(110deg,#160e2c,#4c1d95 52%,#c026d3)}.banner-purple{background:linear-gradient(110deg,#160e2c,#4c1d95 52%,#c026d3)}.banner-blue{background:linear-gradient(110deg,#101b3d,#1d4ed8 55%,#06b6d4)}.banner-orange{background:linear-gradient(110deg,#28103a,#86198f 55%,#db2777)}.hero-cube{box-shadow:0 0 42px #d946ef30;background:linear-gradient(145deg,#ffffff24,#c026d320)}.ad-card:hover{box-shadow:0 12px 38px #a855f72a}.ad-art,.detail-photo{filter:saturate(.88)}.footer{border-color:#252b40;color:#818ba8}.mobile-nav{background:#0d101cf2;border-color:#252b40}.mobile-nav button{color:#929bb8}.mobile-nav button.mobile-active{color:#e879f9}.soft-tag{background:#241535;color:#e879f9}.admin-alert{background:#171326;border-color:#38234d;color:#e9d5ff}.permission-box h3,.section-heading h2,.page-title h1,.modal-head h2{color:#f5f3ff}.toast{background:#221532;border:1px solid #663399}.danger-button{border:1px solid #7f1d1d;background:#3a111b;color:#fecaca;border-radius:10px;padding:11px 14px;font-weight:800;display:inline-flex;align-items:center;gap:8px}.review-demo-list{margin-top:12px}.review-demo-list .permission-row{border-color:#272d43}.shop-cover{background:linear-gradient(120deg,#160e2c,#4c1d95 60%,#c026d3)}
 
 .primary-button.full-button{text-decoration:none;}
+/* Обёртки для фото */
+.ad-photo-wrap,
+.detail-photo-img,
+.thumb-img {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 61px;
+  overflow: hidden;
+}
+.detail-photo-img { font-size: 130px; position: relative; inset: auto; }
+.ad-photo-wrap img, .detail-photo-img img, .thumb-img img {
+  width: 100%; height: 100%; object-fit: cover;
+}
+.thumb { position: relative; overflow: hidden; }
+
+/* Компактные кнопки */
+.secondary-button.compact, .primary-button.compact, .danger-button.compact {
+  height: 32px; padding: 0 10px; font-size: 11px;
+}
+.danger-button {
+  background: #3a111b; border: 1px solid #7f1d1d; color: #fecaca;
+  border-radius: 10px; padding: 11px 14px; font-weight: 800;
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  transition: .15s;
+}
+.danger-button:hover { background: #4b1521; }
+.danger-button:disabled { opacity: .4; cursor: not-allowed; }
+.danger-zone { border-color: #7f1d1d; }
+
+/* Отключённые кнопки */
+button:disabled { opacity: .5; cursor: not-allowed; }
+
+/* Кнопки в admin-tiles без дефолтного фона */
+.admin-tile { background: #111522; }
+
+/* Уведомление о пустом списке */
+.status-active { color: #6ee7b7; font-size: 11px; font-weight: 700; }
+.status-banned { background: #3a111b; color: #fecaca; padding: 5px 8px; border-radius: 6px; font-size: 10px; }
+
+/* Табличная кнопка "dots" */
+.dots-button { width: 32px; height: 32px; }
